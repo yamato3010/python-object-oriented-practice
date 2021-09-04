@@ -1,5 +1,8 @@
 class JankenGame:
+    # クラスの中のインスタンスには必ずselfを第一引数に入れる
+    # クラスを作る、関数をメゾットにする、関数をコピペ、エラーが出る、すべての第一引数にself、関数が呼び出されているところにself.関数名
     def play(self, left_hand: int, right_hand: int):
+        # この(self)judge 違うメゾットを呼び出したいときはself.メゾットで呼び出す。
         result = self.judge(left_hand, right_hand)
         self.show_result(result)
 

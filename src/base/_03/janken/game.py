@@ -31,9 +31,17 @@ class JankenGame:
 
     def show_result(self, result: int, lang: str):
         # ja: 日本語、en: 英語で結果を表示しよう
-        if result == 1:
-            print("勝ち")
-        elif result == 0:
-            print("引き分け")
+        if lang == "ja":
+            if result == 1:
+                print("勝ち")
+            elif result == 0:
+                print("引き分け")
+            else:
+                print("負け")
         else:
-            print("負け")
+            if result == 1:
+                print("Win")
+            elif result == 0:
+                print("Draw")
+            else:
+                print("Lose")

@@ -32,13 +32,33 @@ class JankenGame:
     def show_result(self, result: int, lang: str):
         if lang == "ja":
             # JapaneseDisplayを使おう
+            display = JapaneseDisplay()
+            display.show(result)
             return
         else:
             # EnglishDisplay を使おう
+            display = EnglishDisplay()
+            display.show(result)
             return
 
 
 # JapaneseDisplay クラスを定義しよう
+class JapaneseDisplay:
+    def show(self, result: int):
+        if result == 1:
+            print("勝ち")
+        elif result == 0:
+            print("引き分け")
+        else:
+            print("負け")
 
 
 # EnglishDisplay クラスを定義しよう
+class EnglishDisplay:
+    def show(self, result: int):
+        if result == 1:
+            print("win")
+        elif result == 0:
+            print("draw")
+        else:
+            print("lose")

@@ -31,11 +31,34 @@ class JankenGame:
 
     def show_result(self, result: int, lang: str):
         if lang == "ja":
+            # クラスを使う
             display = JapaneseDisplay()
             display.show(result)
         else:
+            # クラスを使う
             display = EnglishDisplay()
             display.show(result)
+        '''
+        if lang == "ja":
+            # クラスを使う
+            display = JapaneseDisplay()
+        else:
+            # クラスを使う
+            display = EnglishDisplay()
+        display.show(result)
+
+        このようにもできる
+        また、
+
+        def get_display:
+            if lang == "ja":
+                display = JapaneseDisplay()
+            else:
+                display = EnglishDisplay()
+        
+        このように別の関数にもできる
+
+        '''
 
 
 class JapaneseDisplay:

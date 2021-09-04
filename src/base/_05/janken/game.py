@@ -5,7 +5,8 @@ class JankenGame:
         :param rule_name: default:通常, reverse:逆
         """
         # ルールを使うように書き換えよう
-        result = self.judge(left_hand, right_hand)
+        rule = self.get_rule(rule_name)
+        result = rule.judge(left_hand, right_hand)
         display = self.get_display(lang)
         display.show(result)
 
@@ -31,6 +32,12 @@ class JankenGame:
                 return -1
             else:  # Par
                 return 0
+
+    def get_rule(self, rule: str):
+        if rule == "default":
+            return NormalRule()
+        else:
+            return ReverseRule()
 
     def get_display(self, lang: str):
         if lang == "ja":

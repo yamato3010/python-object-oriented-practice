@@ -30,6 +30,7 @@ class JankenGame:
                 return 0
 
     def show_result(self, result: int, lang: str):
+        # 
         if lang == "ja":
             if result == 1:
                 print("勝ち")

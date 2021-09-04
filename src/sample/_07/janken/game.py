@@ -1,5 +1,6 @@
 # コンストラクタを定義して、display と rule を受け取ってフィールドに格納して利用しよう
 class JankenGame:
+    # mainの8行目から
     def __init__(self, display, rule):
         self.display = display
         self.rule = rule
